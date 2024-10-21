@@ -37,7 +37,8 @@ html, body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh; 
+    min-height: 100vh;
+    width: 100%;
 }
 
 /* Стили для шапки */
@@ -297,7 +298,12 @@ p {
     gap: 20px; 
     justify-content: center; 
     align-items: center; 
-    /* Убедитесь, что у вас нет margin-top для .our-menu */
+}
+@media (max-width: 768px) {
+    .our-menu {
+        flex-direction: column; /* Расположение элементов колонной */
+        gap: 20px; /* Оставляем промежутки между элементами */
+    }
 }
 
 .rectangle {
@@ -389,12 +395,13 @@ p {
 /* Стили для футтера */
 footer {
     width: 100%;
-    background-color: #333333; /* Темный фон футтера */
+    background-color: #333333; /* Темный фон футера */
     color: white; /* Цвет текста */
     padding: 20px; /* Отступы вокруг содержимого */
     text-align: center; /* Центрирование текста */
     font-size: 14px; /* Размер шрифта */
     position: relative; /* Позволяет использовать z-index */
+    box-sizing: border-box; /* Учитывает padding и border в ширине элемента */
 }
 
 .footer-logo {
