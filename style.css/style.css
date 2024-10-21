@@ -42,12 +42,14 @@ html, body {
 }
 
 /* Стили для шапки */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+.header {
+    position: fixed; /* Закрепляет заголовок на месте */
+    top: 0; /* Устанавливает его в верхней части экрана */
+    width: 100%; /* Занимает полную ширину */
+    height: 100vh; /* Занимает 100% высоты экрана */
+    z-index: 1000; /* Обеспечивает, чтобы заголовок был над другим контентом */
 }
+
 
 .header-container {
     /* Здесь могут быть дополнительные стили для контейнера шапки */
@@ -102,6 +104,24 @@ header {
     cursor: pointer;
     z-index: 1001;
 }
+
+@media (max-width: 480px) {
+    .burger {
+        display: flex; /* Показываем элемент */
+        position: absolute; /* Располагаем элемент по абсолютным координатам */
+        top: 10px; /* Отступ сверху */
+        left: 10px; /* Отступ слева */
+    }
+}
+@media (max-width: 768px) {
+    .burger {
+        display: flex; /* Показываем элемент */
+        position: absolute; /* Располагаем элемент по абсолютным координатам */
+        top: 10px; /* Отступ сверху */
+        left: 10px; /* Отступ слева */
+    }
+}
+
 
 .burger .line {
     height: 3px;
@@ -246,11 +266,12 @@ p {
 
 /* Стили для баров */
 .bar {
-
     border: 1px solid #888;
     padding: 15px;
     background-color: #333333;
     border-radius: 10px; /* Добавлено скругление */
+    height: 100%; /* Высота на всю высоту родительского элемента */
+    box-sizing: border-box; /* Учитывает padding и border в общей высоте */
 }
 
 .bar a {
