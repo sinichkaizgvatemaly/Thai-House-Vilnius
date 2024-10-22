@@ -11,6 +11,14 @@
     <header class="header">
         <div class="header-container">
             <nav class="menu">
+                <div class="language-switcher">
+                    <select id="language" onchange="changeLanguage(this.value)">
+                        <option value="en">🇬🇧</option>
+                        <option value="ru">🇷🇺</option>
+                        <option value="lt">🇱🇹</option>
+                        <option value="uk">🇺🇦</option>
+                    </select>
+                </div>
                 <a href="index.html" class="logo">
                     <img src="img/logo.png" alt="logo Thai House" width="80" height="80">
                 </a>
@@ -37,7 +45,6 @@
                     </li>
                 </ul>
                 
-
                 <div class="modal" id="contact-modal">
                     <div class="modal-content">
                         <span class="close-button">&times;</span>
@@ -86,10 +93,11 @@
             </nav>
         </div>
     </header>
+
     <main>
         <div class="about">
-            <h1>Thai Restaurant in Vilnius</h1>
-            <p>
+            <h1 id="about-title">Thai Restaurant in Vilnius</h1>
+            <p id="about-description">
                 Where you can enjoy a variety of dishes prepared using traditional recipes and ingredients.<br>
                 Our restaurant offers guests authentic tastes of Thailand, such as Tom Yum, Pad Thai, curry, spring rolls, and much more.<br>
                 In a cozy atmosphere, you can try both spicy and less spicy dishes, enjoying exotic aromas and exquisite<br>
@@ -97,6 +105,7 @@
                 culture and traditions of Thailand.
             </p>
         </div>
+    
         <div class="menu-file">
             <div class="about-menu-container">
                 <div class="menu-header">
@@ -115,7 +124,6 @@
                 </p>
             </div>
         
-
             <div id="section1" class="our-menu">
                 <div class="rectangle">
                     <a class="bar-menu" href="https://docs.google.com/document/d/1kBTCWPTSMSSH4anO2F2V8VD70m5rYCmbIaWbGQEJqKI/edit?tab=t.0">
@@ -153,6 +161,6 @@
         </div>
     </footer>
     
-    <script src="js/script.js"></script> <!-- Обновите путь к JS файлу -->
+    <script src="js/script.js"></script>
 </body>
 </html>
