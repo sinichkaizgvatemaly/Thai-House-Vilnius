@@ -75,9 +75,12 @@ html, body {
 .menu.scrolled {
     background-color: #333333; /* Фон при прокрутке */
 }
-.language-switcher {
-    
-}
+@media (max-width: 1199.98px){.language-switcher {
+    position: absolute;
+        top: 50%;
+        left: 30px;
+        transform: translateY(-50%);
+}}
 
 .language-switcher label {
     margin-right: 5px;
@@ -146,18 +149,15 @@ html, body {
     z-index: 1001;
 }
 
-@media (max-width: 480px) {
-    .burger {
-    }
-    
-}
-@media (max-width: 768px) {
+@media (max-width: 1199.98px) {
     .burger {
         position: absolute;
-        top: 15px;
-        right: 15px;
+        top: 50%;
+        right: 30px;
+        transform: translateY(-50%);
     }
 }
+
 
 
 .burger .line {
@@ -318,14 +318,14 @@ p {
 .bar a:last-child {
     margin-right: 0; /* Убираем отступ у последнего элемента */
 }
-@media (max-width: 768px) {
+@media (max-width: 1199.98px){
     .menu {
         display: flex;
         flex-direction: column;
         align-items: center; /* Выравниваем элементы по центру */
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 1199.98px){
     .bar {
         display: none; /* Скрываем .bar */
     }
@@ -371,7 +371,7 @@ p {
     justify-content: center; 
     align-items: center; 
 }
-@media (max-width: 768px) {
+@media (max-width: 1199.98px){
     .our-menu {
         flex-direction: column; /* Расположение элементов колонной */
         gap: 20px; /* Оставляем промежутки между элементами */
@@ -405,7 +405,7 @@ p {
 
 
 /* Медиа-запросы для мобильных устройств и планшетов */
-@media (max-width: 768px) {
+@media (max-width: 1199.98px){
     .menu-list {
         flex-direction: column; /* Вертикальное расположение для мобильных */
         gap: 10px;
@@ -451,7 +451,7 @@ p {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1199.98px){
     h1 {
         font-size: 28px; /* Дополнительное уменьшение заголовка для маленьких экранов */
     }
@@ -502,9 +502,44 @@ footer {
 }
 
 /* Адаптивные стили */
-@media (max-width: 768px) {
+@media (max-width: 1199.98px){
     footer {
         font-size: 12px; /* Уменьшение размера шрифта на мобильных */
     }
+}
+/*=================================================================================================================================*/
+
+
+.scroll-container {
+    display: flex;
+    overflow-x: hidden; /* Скрываем прокрутку */
+    scroll-behavior: smooth; /* Плавная прокрутка */
+    width: 100%;
+    padding: 20px;
+    position: relative;
+}
+.scroll-container img {
+    margin-right: 10px; /* Отступы между изображениями */
+    object-fit: cover; /* Обрезка изображения для заполнения размеров */
+}
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: black;
+    color: white; /* Цвет текста на кнопках */
+    border: none; /* Убираем рамку */
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+.scroll-left {
+    position: absolute; /* Добавьте абсолютное позиционирование */
+    left: 10px; /* Позиция кнопки "влево" */
+}
+
+.scroll-right {
+    position: absolute; /* Добавьте абсолютное позиционирование */
+    right: 10px; /* Позиция кнопки "вправо" */
 }
 
