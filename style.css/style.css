@@ -75,6 +75,44 @@ html, body {
 .menu.scrolled {
     background-color: #333333; /* Фон при прокрутке */
 }
+.language-switcher {
+    
+}
+
+.language-switcher label {
+    margin-right: 5px;
+}
+
+.language-switcher select {
+    padding: 10px; /* Добавляем отступы для удобства */
+    border: 2px solid transparent; /* Убираем цвет границы */
+    border-radius: 0; /* Убираем закругления, чтобы сделать его квадратным */
+    background-color: transparent; /* Устанавливаем фон прозрачным */
+    color: #333; /* Цвет текста */
+    font-size: 16px; /* Размер шрифта */
+    appearance: none; /* Убираем стандартный стиль браузера */
+    outline: none; /* Убираем обводку при фокусе */
+}
+
+.language-switcher select:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Прозрачный цвет фона при наведении */
+}
+
+.language-switcher select:focus {
+    border-color: #007bff; /* Цвет границы при фокусе */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Тень при фокусе */
+}
+@media screen and (max-width: 768px) {
+    .language-switcher {
+        position: absolute; /* Позиционирование относительно ближайшего предка с position: relative */
+        top: 30px; /* Расстояние от верхнего края */
+        left: 20px; /* Расстояние от левого края */
+        z-index: 1000; /* Убедитесь, что переключатель выше других элементов */
+    }
+}
+
+
+
 
 .menu-list {
     font-weight: 600;
